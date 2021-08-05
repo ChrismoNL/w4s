@@ -1,8 +1,9 @@
-[![Blitz.js](https://raw.githubusercontent.com/blitz-js/art/master/github-cover-photo.png)](https://blitzjs.com)
+# **Webshop 4 Sale**
 
-This is a [Blitz.js](https://github.com/blitz-js/blitz) app.
-
-# **W4S**
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ChrismoNL_w4s&metric=alert_status)](https://sonarcloud.io/dashboard?id=ChrismoNL_w4s)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ChrismoNL_w4s&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ChrismoNL_w4s)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ChrismoNL_w4s&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ChrismoNL_w4s)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ChrismoNL_w4s&metric=security_rating)](https://sonarcloud.io/dashboard?id=ChrismoNL_w4s)
 
 ## Getting Started
 
