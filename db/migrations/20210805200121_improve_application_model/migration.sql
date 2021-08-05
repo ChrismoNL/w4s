@@ -1,0 +1,15 @@
+-- AlterTable
+ALTER TABLE "Application" ADD COLUMN     "domain" TEXT,
+ALTER COLUMN "description" DROP NOT NULL,
+ALTER COLUMN "industry" DROP NOT NULL,
+ALTER COLUMN "askingPrice" DROP NOT NULL,
+ALTER COLUMN "annualTurnover" DROP NOT NULL,
+ALTER COLUMN "annualProfit" DROP NOT NULL,
+ALTER COLUMN "monthlyVisitors" DROP NOT NULL,
+ALTER COLUMN "monthlyPageViews" DROP NOT NULL,
+ALTER COLUMN "transactionType" DROP NOT NULL,
+ALTER COLUMN "orderProcessingType" DROP NOT NULL,
+ALTER COLUMN "stockValue" DROP NOT NULL,
+ALTER COLUMN "weeklyCommitment" DROP NOT NULL,
+ALTER COLUMN "existSince" DROP NOT NULL,
+ALTER COLUMN "platformType" DROP NOT NULL;
