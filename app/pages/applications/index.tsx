@@ -23,7 +23,7 @@ export const ApplicationsList = () => {
         {applications.map((application) => (
           <li key={application.id}>
             <Link href={Routes.ShowApplicationPage({ applicationId: application.id })}>
-              <a>{application.name}</a>
+              <a>{application.title}</a>
             </Link>
           </li>
         ))}
