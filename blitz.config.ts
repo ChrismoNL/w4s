@@ -1,6 +1,10 @@
 import { BlitzConfig, sessionMiddleware, simpleRolesIsAuthorized } from "blitz"
 
 const config: BlitzConfig = {
+  i18n: {
+    locales: ["en", "nl"],
+    defaultLocale: "en",
+  },
   middleware: [
     sessionMiddleware({
       cookiePrefix: "W4S",
