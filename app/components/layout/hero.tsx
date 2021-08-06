@@ -1,7 +1,9 @@
 import React from "react"
+import { useTranslations } from "next-intl"
 import { chakra, Box, useColorModeValue, Icon, Image } from "@chakra-ui/react"
 
 const Hero = () => {
+  const t = useTranslations()
   const bg = useColorModeValue("white", "gray.800")
   return (
     <Box pos="relative" overflow="hidden" bg={bg} mt={10}>
@@ -52,13 +54,7 @@ const Hero = () => {
                 color={useColorModeValue("gray.900", "white")}
               >
                 <chakra.span display={{ base: "block", xl: "inline" }}>
-                  Data to enrich your{" "}
-                </chakra.span>
-                <chakra.span
-                  display={{ base: "block", xl: "inline" }}
-                  color={useColorModeValue("brand.600", "brand.400")}
-                >
-                  online business
+                  {t("hero-title")}
                 </chakra.span>
               </chakra.h1>
               <chakra.p
@@ -68,8 +64,7 @@ const Hero = () => {
                 mx={{ sm: "auto", lg: 0 }}
                 color="gray.500"
               >
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-                commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                {t("hero-description")}
               </chakra.p>
               <Box
                 mt={{ base: 5, sm: 8 }}
@@ -87,13 +82,14 @@ const Hero = () => {
                     border="solid 1px transparent"
                     fontSize={{ base: "md", md: "lg" }}
                     rounded="md"
-                    color="white"
-                    bg="brand.600"
-                    _hover={{ bg: "brand.700" }}
+                    color="brand.700"
+                    bg="brand.100"
+                    _hover={{ bg: "brand.200" }}
                     px={{ base: 8, md: 10 }}
                     py={{ base: 3, md: 4 }}
+                    href="#"
                   >
-                    Get started
+                    {t("hero-btn-search")}
                   </chakra.a>
                 </Box>
                 <Box mt={[3, 0]} ml={[null, 3]}>
@@ -110,8 +106,9 @@ const Hero = () => {
                     color="brand.700"
                     bg="brand.100"
                     _hover={{ bg: "brand.200" }}
+                    href="#"
                   >
-                    Live demo
+                    {t("hero-btn-add")}
                   </chakra.a>
                 </Box>
               </Box>

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react"
-import { Link, BlitzPage, useMutation, Routes } from "blitz"
+import { Link, BlitzPage, useMutation, Routes, GetStaticPropsContext } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
@@ -57,5 +57,16 @@ const Home: BlitzPage = () => {
 
 Home.suppressFirstRenderFlicker = true
 Home.getLayout = (page) => <Layout title="Home">{page}</Layout>
+
+export function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: {
+        ...require(`../locales/${locale}/home.json`),
+      },
+      now: new Date().getTime(),
+    },
+  }
+}
 
 export default Home

@@ -32,6 +32,7 @@
     "blitz": "0.38.6",
     "final-form": "4.20.2",
     "framer-motion": "3.2.0",
+    "next-intl": "1.4.7",
     "react": "alpha",
     "react-dom": "alpha",
     "react-final-form": "6.5.3",

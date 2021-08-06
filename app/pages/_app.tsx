@@ -8,21 +8,38 @@ import {
   useQueryErrorResetBoundary,
 } from "blitz"
 import LoginForm from "app/auth/components/LoginForm"
-
+import { NextIntlProvider } from "next-intl"
 import { ChakraProvider } from "@chakra-ui/react"
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
 
   return (
-    <ChakraProvider>
-      <ErrorBoundary
-        FallbackComponent={RootErrorFallback}
-        onReset={useQueryErrorResetBoundary().reset}
-      >
-        {getLayout(<Component {...pageProps} />)}
-      </ErrorBoundary>
-    </ChakraProvider>
+    <NextIntlProvider
+      // To achieve consistent date, time and number formatting
+      // across the app, you can define a set of global formats.
+      formats={{
+        dateTime: {
+          short: {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          },
+        },
+      }}
+      messages={pageProps.messages}
+      now={new Date(pageProps.now)}
+      timeZone="Europe/Amsterdam"
+    >
+      <ChakraProvider>
+        <ErrorBoundary
+          FallbackComponent={RootErrorFallback}
+          onReset={useQueryErrorResetBoundary().reset}
+        >
+          {getLayout(<Component {...pageProps} />)}
+        </ErrorBoundary>
+      </ChakraProvider>
+    </NextIntlProvider>
   )
 }
 
