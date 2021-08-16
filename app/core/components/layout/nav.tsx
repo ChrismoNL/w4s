@@ -45,8 +45,8 @@ export const Nav = () => {
   return (
     <>
       <Box
-        backgroundColor="blue.200"
-        color="white"
+        backgroundColor="white"
+        color="blue.500"
         height={30}
         display={["none", "none", "flex", "flex"]}
       >
