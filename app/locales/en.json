@@ -8,14 +8,8 @@
     "learn-link-title": "Learn about buying a webshop",
     "contact-link-label": "Contact",
     "contact-link-title": "Contact Webshop 4 Sale",
-    "login-link-label": "Login",
-    "login-link-title": "Log into your Webshop 4 Sale account",
-    "register-link-label": "Register",
-    "register-link-title": "Register your Webshop 4 Sale account",
-    "english-option-alt": "English",
-    "english-option-title": "Switch to English",
-    "dutch-option-alt": "Nederlands",
-    "dutch-option-title": "Wissel naar het Nederlands"
+    "account-link-label": "Account",
+    "account-link-title": "Your Webshop 4 Sale account"
   },
   "Home": {
     "hello": "Welcome to Webshop 4 Sale"
