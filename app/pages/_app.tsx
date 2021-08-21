@@ -1,4 +1,5 @@
 import {
+  useSession,
   AppProps,
   ErrorBoundary,
   ErrorComponent,
@@ -6,13 +7,21 @@ import {
   AuthorizationError,
   ErrorFallbackProps,
   useQueryErrorResetBoundary,
-} from "blitz"
+} from "blitz";
 import LoginForm from "app/auth/components/LoginForm"
 import { NextIntlProvider } from "next-intl"
 import { ChakraProvider } from "@chakra-ui/react"
 import { extendTheme } from "@chakra-ui/react"
 
+import * as LogRocket from "integrations/logrocket";
+import React from "react";
+LogRocket.init();
+
 export default function App({ Component, pageProps }: AppProps) {
+  const session = useSession({
+    suspense: false
+  });
+
   const getLayout = Component.getLayout || ((page) => page)
 
   const theme = extendTheme({
@@ -53,6 +62,12 @@ export default function App({ Component, pageProps }: AppProps) {
       },
     },
   })
+
+  React.useEffect(() => {
+    if (session.userId) {
+      LogRocket.identify(session.userId.toString());
+    }
+  }, [session]);
 
   return (
     <NextIntlProvider
