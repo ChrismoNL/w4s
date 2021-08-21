@@ -13,7 +13,8 @@
     "db-migration": "blitz prisma migrate deploy",
     "extract:i18n": "formatjs extract '{pages,components,sections}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/en.json",
     "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/compiled-locales",
-    "i18n": "npm run extract:i18n && npm run compile:i18n"
+    "i18n": "npm run extract:i18n && npm run compile:i18n",
+    "contentful-typescript-codegen": "contentful-typescript-codegen --output integrations/generated/contentful.d.ts"
   },
   "prisma": {
     "schema": "db/schema.prisma"
@@ -34,9 +35,15 @@
     "@emotion/styled": "11.0.0",
     "@prisma/client": "2.28.0",
     "blitz": "0.38.6",
+    "contentful": "8.5.0",
+    "contentful-management": "7.32.0",
+    "contentful-typescript-codegen": "3.2.2",
     "final-form": "4.20.2",
     "framer-motion": "3.2.0",
+    "logrocket": "2.0.0",
+    "logrocket-react": "4.0.1",
     "next-intl": "1.4.7",
+    "next-seo": "4.26.0",
     "react": "alpha",
     "react-dom": "alpha",
     "react-final-form": "6.5.3",

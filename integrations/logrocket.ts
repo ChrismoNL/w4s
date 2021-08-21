@@ -8,7 +8,7 @@ const isActive = () =>
 
 export const init = () => {
   if (isActive()) {
-    LogRocket.init(process.env.NEXT_PUBLIC_LOG_ROCKET_APP_ID, {
+    LogRocket.init(process.env.NEXT_PUBLIC_LOG_ROCKET_APP_ID as string, {
       dom: {
         // Obfuscate all user inputs
         inputSanitizer: true,
