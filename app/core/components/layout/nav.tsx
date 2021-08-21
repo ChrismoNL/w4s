@@ -12,7 +12,7 @@ export const Nav = () => {
 
   return (
     <>
-      <Flex backgroundColor="blue.500" color="white">
+      <Flex position="fixed" backgroundColor="blue.500" color="white" w="100%" height="60px">
         <Box m={3}>
           <Text fontSize="1xl" display="inline-block" fontWeight="bold">
             Webshop
