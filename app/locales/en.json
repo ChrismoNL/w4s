@@ -1,0 +1,17 @@
+{
+  "Nav": {
+    "buy-link-label": "Buy",
+    "buy-link-title": "Buy your next webshop",
+    "sell-link-label": "Sell",
+    "sell-link-title": "Sell your webshop",
+    "learn-link-label": "Learn",
+    "learn-link-title": "Learn about buying a webshop",
+    "contact-link-label": "Contact",
+    "contact-link-title": "Contact Webshop 4 Sale",
+    "account-link-label": "Account",
+    "account-link-title": "Your Webshop 4 Sale account"
+  },
+  "Home": {
+    "hello": "Welcome to Webshop 4 Sale"
+  }
+}

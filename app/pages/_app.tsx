@@ -1,4 +1,5 @@
 import {
+  useSession,
   AppProps,
   ErrorBoundary,
   ErrorComponent,
@@ -10,9 +11,63 @@ import {
 import LoginForm from "app/auth/components/LoginForm"
 import { NextIntlProvider } from "next-intl"
 import { ChakraProvider } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react"
+
+import * as LogRocket from "integrations/logrocket"
+import React from "react"
+LogRocket.init()
 
 export default function App({ Component, pageProps }: AppProps) {
+  const session = useSession({
+    suspense: false,
+  })
+
   const getLayout = Component.getLayout || ((page) => page)
+
+  const theme = extendTheme({
+    colors: {
+      ba: "#E5E8F0",
+      black: "#000", // DEFAULT FOR SCHEME
+      white: "#fff", // DEFAULT FOR SCHEME
+      brand: {
+        500: "#F9A824",
+      },
+      blue: {
+        200: "#93A2C6",
+        500: "#2150A6",
+        900: "#00205C",
+      },
+      gray: {
+        100: "#F2F3F7",
+        200: "#E5E8F0",
+        500: "#BEC6DC",
+      },
+    },
+    fonts: {
+      body: "'Raleway', sans-serif",
+      heading: "'Roboto', sans-serif",
+    },
+    styles: {
+      global: {
+        // styles for the `body`
+        body: {
+          bg: "gray.200",
+        },
+        // styles for the `a`
+        a: {
+          _hover: {
+            color: "brand.500",
+          },
+        },
+      },
+    },
+  })
+
+  React.useEffect(() => {
+    if (session.userId) {
+      LogRocket.identify(session.userId.toString())
+    }
+  }, [session])
 
   return (
     <NextIntlProvider
@@ -31,7 +86,7 @@ export default function App({ Component, pageProps }: AppProps) {
       now={new Date(pageProps.now)}
       timeZone="Europe/Amsterdam"
     >
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <ErrorBoundary
           FallbackComponent={RootErrorFallback}
           onReset={useQueryErrorResetBoundary().reset}
