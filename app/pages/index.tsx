@@ -43,6 +43,7 @@ export async function getStaticProps({ locale }) {
       messages: require(`../locales/${locale}.json`),
       page: currentPage?.fields,
     },
+    revalidate: 60,
   }
 }
 
