@@ -11,6 +11,15 @@
     "account-link-label": "Account",
     "account-link-title": "Jouw Webshop 4 Sale account"
   },
+  "Footer": {
+    "language": "Taal",
+    "privacy-link-label": "Privacy",
+    "privacy-link-title": "De privacy statement van Webshop 4 Sale",
+    "terms-link-label": "Voorwaarden",
+    "terms-link-title": "De voorwaarden van Webshop 4 Sale",
+    "sitemap-link-label": "Sitemap",
+    "sitemap-link-title": "De sitemap van Webshop 4 Sale"
+  },
   "Home": {
     "hello": "Wekom bij Webshop 4 Sale"
   }
