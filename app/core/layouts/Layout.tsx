@@ -2,6 +2,7 @@ import { ReactNode } from "react"
 import { Head } from "blitz"
 import { Nav } from "../components/layout/nav"
 import { Flex } from "@chakra-ui/react"
+import { Footer } from "../components/layout/footer"
 
 type LayoutProps = {
   title?: string
@@ -18,6 +19,7 @@ const Layout = ({ title, children }: LayoutProps) => {
 
       <Nav />
       {children}
+      <Footer />
     </>
   )
 }

@@ -11,6 +11,15 @@
     "account-link-label": "Account",
     "account-link-title": "Your Webshop 4 Sale account"
   },
+  "Footer": {
+    "language": "Language",
+    "privacy-link-label": "Privacy",
+    "privacy-link-title": "The privacy statement of Webshop 4 Sale",
+    "terms-link-label": "Terms",
+    "terms-link-title": "The terms of Webshop 4 Sale",
+    "sitemap-link-label": "Sitemap",
+    "sitemap-link-title": "The sitemap of Webshop 4 Sale"
+  },
   "Home": {
     "hello": "Welcome to Webshop 4 Sale"
   }
